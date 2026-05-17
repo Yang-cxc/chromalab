@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实验室主页</title>
+
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif;
+	background: #fff;
+}
+
+/* 整个首屏大图区域 */
+.hero {
+	width: 100%;
+	height: 100vh;
+	background: url("首页背景/188.gif") no-repeat center center;
+	background-size: cover;
+	position: relative;
+	color: #000;
+	overflow: hidden;
+}
+
+/* 浅色遮罩，让背景柔和一些 */
+.hero .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.35);
+}
+
+/* 顶部导航 */
+.nav {
+	position: absolute;
+	top: 30px;
+	right: 80px;
+	z-index: 10;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav ul li {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.nav ul li a {
+	color: #000;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.nav ul li a:hover {
+	border-bottom: 2px solid #000;
+}
+
+/* 顶部标题 */
+.top-title {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 20;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+}
+
+/* 正文区域 */
+.hero-text {
+	position: absolute;
+	top: 180px;
+	left: 80px;
+	right: 80px;
+	z-index: 10;
+	color:s #000;
+}
+
+.hero-text p {
+	margin: 0 0 30px 0;
+	font-size: 20px;
+	line-height: 1.8;
+	font-weight: bold;
+	color: #000;
+	text-align: left;
+	text-indent: 2em;   /* 首行缩进两个字符 */
+}
+
+/* 联系我们 */
+.contact-link {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 20;
+}
+
+.contact-link a {
+	color: #000;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.contact-link a:hover {
+	text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+	<div class="overlay"></div>
+
+	<!-- 导航栏 -->
+	<div class="nav">
+		<ul>
+			<li><a>首页</a></li>
+			<li><a href="./first13.html">新闻</a></li>
+			<li><a href="./first11.html">成员</a></li>
+			<li><a href="./first-chengguo.html">成果发表</a></li>
+			<li><a href="./fiest12.html">实验设备</a></li>
+		</ul>
+	</div>
+
+	<!-- 最上方中间标题 -->
+	<div class="top-title">
+		颜色与科学技术实验室
+	</div>
+
+	<!-- 正文内容 -->
+	<div class="hero-text">
+		<p>
+			欢迎来到颜色科学实验室。本实验室主要面向颜色科学、视觉感知、图像处理与色彩评价等领域开展研究，
+			关注颜色在数字图像、显示设备、虚拟场景及人因感知中的表达规律与应用价值。实验室以颜色科学理论为基础，
+			结合心理物理实验、视觉评价实验、色度数据分析、统计建模与人工智能方法，探索人眼对颜色差异、肤色还原、
+			图像质量及颜色外观的感知机制，推动颜色科学研究在图像显示、视觉传达、工业检测和数字媒体等领域中的实际应用。
+		</p>
+
+		<p>
+			实验室现有指导教师3名、学生7名。高程导师为副教授、博士，长期从事颜色科学与视觉感知相关研究，
+			具有扎实的理论基础和丰富的科研指导经验。
+		</p>
+
+		<p>
+			目前，实验室研究方向主要包括色差评价、肤色感知与还原、颜色外观模型、图像颜色质量评价以及基于神经网络的
+			色差模型改良等。未来，实验室将继续围绕颜色感知规律与颜色评价方法开展深入研究，努力形成具有特色的科研成果，
+			并推动颜色科学理论在实际视觉场景中的应用转化。欢迎对颜色科学、图像处理、视觉感知和人工智能感兴趣的同学加入实验室，
+			共同开展探索与研究。
+		</p>
+	</div>
+
+	<!-- 联系我们 -->
+	<div class="contact-link">
+		<a href="email.html">联系我们</a>
+	</div>
+
+</div>
+
+</body>
+</html>

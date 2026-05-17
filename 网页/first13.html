@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实验室新闻近况</title>
+
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif;
+	background: linear-gradient(135deg, #EEF4FA 0%, #E6ECF7 45%, #F3EDF8 100%);
+	color: #222;
+}
+
+/* 顶部导航 */
+.nav {
+	position: absolute;
+	top: 32px;
+	right: 80px;
+	z-index: 10;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav ul li {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.nav ul li a {
+	color: #111;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.nav ul li a:hover {
+	color: #6B4FC9;
+	border-bottom: 2px solid #6B4FC9;
+}
+
+/* 页面主体 */
+.container {
+	width: 1160px;
+	margin: 30px auto 60px auto;
+}
+
+/* 标题 */
+.page-title {
+	text-align: center;
+	font-size: 46px;
+	font-weight: bold;
+	color: #333;
+	margin: 35px 0 35px 0;
+	letter-spacing: 3px;
+}
+
+/* 轮播外框 */
+.carousel {
+	width: 100%;
+	height: 720px;
+	overflow: hidden;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.85);
+	box-shadow: 0 10px 30px rgba(60, 70, 100, 0.22);
+	position: relative;
+}
+
+/* 鼠标悬停暂停 */
+.carousel:hover .slide-wrap {
+	animation-play-state: paused;
+}
+
+.carousel:hover .dot {
+	animation-play-state: paused;
+}
+
+/* 轮播轨道：7张图，所以是700% */
+.slide-wrap {
+	width: 700%;
+	height: 100%;
+	position: relative;
+	animation: slideMove 21s infinite;
+}
+
+/* 每一页 */
+.slide {
+	float: left;
+	width: 14.2857%;
+	height: 100%;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+/* 图片区域 */
+.slide-img {
+	width: 100%;
+	height: 610px;
+	overflow: hidden;
+	background: #f2f2f2;
+	text-align: center;
+	line-height: 610px;
+}
+
+.slide-img img {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* 图片下方文字 */
+.caption {
+	height: 110px;
+	box-sizing: border-box;
+	padding: 20px 35px;
+	background: rgba(255, 255, 255, 0.95);
+	border-top: 1px solid #ddd;
+}
+
+.caption h2 {
+	margin: 0 0 8px 0;
+	font-size: 26px;
+	color: #2F3A68;
+	font-weight: bold;
+}
+
+.caption p {
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.6;
+	color: #333;
+}
+
+/* 自动轮播动画：7张图，21秒一轮，每张约3秒 */
+@keyframes slideMove {
+	0% { left: 0; }
+	9% { left: 0; }
+
+	14% { left: -100%; }
+	23% { left: -100%; }
+
+	28% { left: -200%; }
+	37% { left: -200%; }
+
+	42% { left: -300%; }
+	51% { left: -300%; }
+
+	56% { left: -400%; }
+	65% { left: -400%; }
+
+	70% { left: -500%; }
+	79% { left: -500%; }
+
+	84% { left: -600%; }
+	93% { left: -600%; }
+
+	100% { left: 0; }
+}
+
+/* 底部圆点 */
+.dots {
+	text-align: center;
+	margin-top: 22px;
+}
+
+.dot {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0 7px;
+	border-radius: 50%;
+	background: #cfcfcf;
+	animation: dotMove 21s infinite;
+}
+
+.dot1 { animation-delay: 0s; }
+.dot2 { animation-delay: 3s; }
+.dot3 { animation-delay: 6s; }
+.dot4 { animation-delay: 9s; }
+.dot5 { animation-delay: 12s; }
+.dot6 { animation-delay: 15s; }
+.dot7 { animation-delay: 18s; }
+
+@keyframes dotMove {
+	0% { background: #b400b8; }
+	9% { background: #b400b8; }
+	14% { background: #cfcfcf; }
+	100% { background: #cfcfcf; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 导航栏 -->
+<div class="nav">
+	<ul>
+		<li><a href="./index.html">首页</a></li>
+		<li><a>新闻</a></li>
+		<li><a href="./first11.html">成员</a></li>
+		<li><a href="./first-chengguo.html">成果发表</a></li>
+		<li><a href="./fiest12.html">实验设备</a></li>
+	</ul>
+</div>
+
+<div class="container">
+
+	<div class="page-title">实验室新闻近况</div>
+
+	<div class="carousel">
+		<div class="slide-wrap">
+
+			<div class="slide">
+				<div class="slide-img">
+					<img src="轮播图/1.jpg" alt="新闻1" />
+				</div>
+				<div class="caption">
+					<h2>2026年4月</h2>
+					<p>李长军教授在北京理工大学参加颜色与视觉科学国际前沿工业论坛并作大会报告</p>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="slide-img">
+					<img src="轮播图/2.jpg" alt="新闻2" />
+				</div>
+				<div class="caption">
+					<h2>2025年8月</h2>
+					<p>李长军教授与高程副教授在重庆大学参加第十六届亚洲照明大会</p>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="slide-img">
+					<img src="轮播图/3.jpg" alt="新闻3" />
+				</div>
+				<div class="caption">
+					<h2>2026年4月</h2>
+					<p>高程导师带领两名硕士生在北京理工大学参加颜色与视觉科学国际前沿工业论坛</p>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="slide-img">
+					<img src="轮播图/4.jpg" alt="新闻4" />
+				</div>
+				<div class="caption">
+					<h2>2025年11月</h2>
+					<p>高程老师在北京参加第二届照明视觉与颜色领域技术创新与标准化研讨会</p>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="slide-img">
+					<img src="轮播图/9.jpg" alt="新闻9" />
+				</div>
+				<div class="caption">
+					<p>课题组与利兹大学联合采集皮肤光谱反射率</p>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="slide-img">
+					<img src="轮播图/10.jpg" alt="新闻10" />
+				</div>
+				<div class="caption">
+					<p>基于植物照明研究课题采集植物叶片光谱反射率</p>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="slide-img">
+					<img src="轮播图/11.jpg" alt="新闻11" />
+				</div>
+				<div class="caption">
+					<h2>2025年5月</h2>
+					<p>高程老师撰写关于CIECAM16的博士学位论文，获评辽宁省优秀博士学位论文</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="dots">
+		<span class="dot dot1"></span>
+		<span class="dot dot2"></span>
+		<span class="dot dot3"></span>
+		<span class="dot dot4"></span>
+		<span class="dot dot5"></span>
+		<span class="dot dot6"></span>
+		<span class="dot dot7"></span>
+	</div>
+
+</div>
+
+</body>
+</html>

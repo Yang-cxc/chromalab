@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Members</title>
+
+<style type="text/css">
+/* 顶部导航 */
+.nav {
+	position: absolute;
+	top: 30px;
+	right: 80px;
+	z-index: 10;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav ul li {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.nav ul li a {
+	color: #000;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.nav ul li a:hover {
+	border-bottom: 2px solid #000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif;
+    background: linear-gradient(-45deg, #CFE7F5, #E6D5DC, #D8ECF7, #F2E6EE);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color: #222;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 1100px;
+    margin: 100px auto 50px auto;
+}
+
+/* 标题 */
+.section-title {
+    font-size: 32px;
+    color: #b3b3b3;
+    text-align: right;
+    margin: 10px 0 15px 0;
+}
+
+.section-line {
+    border: none;
+    border-top: 1px solid #bfbfbf;
+    margin: 0 0 30px 0;
+}
+
+/* 卡片公共样式 */
+.member-card {
+    background: #efefef;
+    border: 1px solid #cfcfcf;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.member-inner {
+    display: flex;
+    align-items: stretch;
+}
+
+.member-photo {
+    width: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.member-info {
+    flex: 1;
+    padding: 18px 26px 18px 26px;
+}
+
+.member-name {
+    font-size: 24px;
+    color: #b400b8;
+    margin: 0 0 12px 0;
+    font-weight: normal;
+}
+
+.teacher-name {
+    color: #222;
+}
+
+.member-desc {
+    font-size: 18px;
+    line-height: 1.45;
+    margin: 0 0 16px 0;
+    text-align: justify;
+}
+
+.member-divider {
+    border: none;
+    border-top: 2px solid #a8a8a8;
+    margin: 10px 0 0 0;
+}
+
+/* 老师区域 */
+.teacher-wrap {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+/* 顶部新增人员：单独居中 */
+.teacher-top {
+    width: 62%;
+    margin: 0 auto 36px auto;
+}
+
+/* 下面两位老师：并排 */
+.teacher-row {
+    display: flex;
+    gap: 46px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.teacher-card {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.teacher-card .member-inner,
+.teacher-top .member-inner {
+    min-height: 240px;
+}
+
+.teacher-card .member-photo,
+.teacher-top .member-photo {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.teacher-top .member-photo {
+    width: 190px;
+    height: 250px;
+}
+
+.teacher-card .member-info,
+.teacher-top .member-info {
+    padding: 20px 28px;
+}
+
+/* 学生区域：一排两个 */
+.student-grid {
+    width: 100%;
+    overflow: hidden;
+}
+
+.student-card {
+    float: left;
+    width: 48%;
+    margin-bottom: 28px;
+    box-sizing: border-box;
+}
+
+.student-card:nth-child(odd) {
+    margin-right: 4%;
+}
+
+.student-card .member-inner {
+    min-height: 220px;
+}
+
+.student-card .member-photo {
+    height: 220px;
+}
+
+.student-card .member-info {
+    padding: 16px 24px;
+}
+
+.student-card .member-name {
+    font-size: 22px;
+}
+
+.student-card .member-desc {
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+/* 页面小一点时自适应 */
+@media screen and (max-width: 1150px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav {
+        right: 30px;
+    }
+
+    .nav ul li {
+        margin-left: 16px;
+    }
+
+    .teacher-top,
+    .teacher-card {
+        width: 100%;
+    }
+
+    .teacher-row {
+        display: block;
+    }
+
+    .teacher-card {
+        margin-bottom: 28px;
+    }
+
+    .teacher-top {
+        margin-bottom: 28px;
+    }
+
+    .student-card {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .member-inner {
+        display: flex;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 导航栏 -->
+<div class="nav">
+	<ul>
+		<li><a href="./index.html">首页</a></li>
+		<li><a href="./first13.html">新闻</a></li>
+		<li><a>成员</a></li>
+		<li><a href="./first-chengguo.html">成果发表</a></li>
+		<li><a href="./fiest12.html">实验设备</a></li>
+	</ul>
+</div>
+
+<div class="container">
+
+    <!-- 老师 -->
+    <div class="teacher-wrap">
+
+        <!-- 第一排：新增人员，单独居中 -->
+        <div class="member-card teacher-top">
+            <div class="member-inner">
+                <img src="个人照片/333.jpg" alt="新增人员姓名" class="member-photo" />
+                <div class="member-info">
+                  <h2 class="member-name teacher-name">李长军（教授）</h2>
+                    <p class="member-desc">
+                        博士生导师，主要从事颜色与视觉科学及多媒体间彩色图像准确再现研究，承担和完成多项国家自然科学基金和国际合作项目，在国际杂志和学术会议发表150多篇研究论文, 其中有80多篇被SCI检索，是国际照明委员会第一和第八分部多个专家组成员；2000年入选中国科学院《百人计划》，2010被国立台湾科技大学聘为专案教授级专家；2011年获欧联盟Erasmus Mundus讲学奖；2012年入选《浙江省千人计划》。曾任国际照明委员会专家组TC-71，TC1-73,和TC8-11的主席
+                    </p>
+                    <hr class="member-divider" />
+              </div>
+          </div>
+        </div>
+
+        <!-- 第二排：高程、张肖辉并排 -->
+        <div class="teacher-row">
+
+            <div class="member-card teacher-card">
+                <div class="member-inner">
+                    <img src="个人照片/1.jpg" alt="高程" class="member-photo" />
+                    <div class="member-info">
+                        <h2 class="member-name teacher-name">高程（副教授）</h2>
+                        <p class="member-desc">
+                            硕士生导师，主要从事色温计算、中视觉照明、色貌模型等相关研究，现为CIE TC1-102技术委员会成员。主持国家自然科学基金一项、辽宁省科技厅项目一项、辽宁省教育厅项目一项。参与国家自然科学基金一项，辽宁省自然科学基金一项。发表SCI等期刊论文20余篇。
+                        </p>
+                        <hr class="member-divider" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card teacher-card">
+                <div class="member-inner">
+                    <img src="个人照片/4.jpg" alt="张肖辉" class="member-photo" />
+                    <div class="member-info">
+                        <h2 class="member-name teacher-name">张肖辉（讲师）</h2>
+                        <p class="member-desc">
+                            讲师，主要从事色温计算，设备特征化等相关研究。参与国家自然科学基金一项，辽宁省科技厅项目一项。发表SCI检索论文3篇。
+                        </p>
+                        <hr class="member-divider" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 学生标题 -->
+    <div class="section-title">研究生</div>
+    <hr class="section-line" />
+
+    <!-- 学生 -->
+    <div class="student-grid">
+
+        <!-- 第1排：左 -->
+        <div class="member-card student-card">
+            <div class="member-inner">
+                <img src="个人照片/2009.JPG" alt="孙猛" class="member-photo" />
+                <div class="member-info">
+                    <h3 class="member-name">孙猛（2023级）</h3>
+                    <p class="member-desc">
+                        研究围绕皮肤光谱反射率的特征分析及其在光学参数预测中的应用展开，通过实测数据揭示特征变化规律，并结合物理模型实现黑色素、氧饱和度的无创反演，为皮肤光学模型优化、光谱重建与真实肤色渲染提供支撑。
+                    </p>
+                    <hr class="member-divider" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 第1排：右 -->
+        <div class="member-card student-card">
+            <div class="member-inner">
+                <img src="个人照片/IMG_5699.JPG" alt="齐圣博" class="member-photo" />
+                <div class="member-info">
+                    <h3 class="member-name">齐圣博（2024级）</h3>
+                    <p class="member-desc">
+                        主要研究方向为色彩科学与图像处理，重点关注色差评价模型与色差公式优化。目前围绕视觉色差数据开展神经网络辅助的色差公式改良研究，致力于提升传统色差公式在复杂颜色样本中的预测精度与感知一致性。
+                    </p>
+                    <hr class="member-divider" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 第2排：左 -->
+        <div class="member-card student-card">
+            <div class="member-inner">
+                <img src="个人照片/2006.JPG" alt="王怡" class="member-photo" />
+                <div class="member-info">
+                    <h3 class="member-name">王怡（2024级）</h3>
+                    <p class="member-desc">
+                        主要研究方向为色彩科学与图像处理，重点关注肤色色差感知评价与肤色模型优化。目前围绕面部肤色色差数据开展视觉实验、色差公式评价与肤色专用色差模型构建研究，致力于提升现有色差模型在肤色区域中的预测准确性与感知一致性。
+                    </p>
+                    <hr class="member-divider" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 第2排：右 -->
+        <div class="member-card student-card">
+            <div class="member-inner">
+                <img src="个人照片/3.jpg" alt="杨晨曦" class="member-photo" />
+                <div class="member-info">
+                    <h3 class="member-name">杨晨曦（2024级）</h3>
+                    <p class="member-desc">
+                        主要研究方向为色彩科学与照明计算。目前围绕色温计算、中视觉照明及色貌模型等方向开展研究，重点关注相关理论模型的计算精度、视觉适应机制及其在实际照明评价中的应用，致力于提升颜色表征与照明评价结果的科学性和一致性。
+                    </p>
+                    <hr class="member-divider" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 第3排：左 -->
+        <div class="member-card student-card">
+            <div class="member-inner">
+                <img src="个人照片/2002.JPG" alt="张思宇" class="member-photo" />
+                <div class="member-info">
+                    <h3 class="member-name">张思宇（2025级）</h3>
+                    <p class="member-desc">
+                        主要研究方向为色彩科学与图像处理，重点关注颜色外观模型与颜色空间优化。目前围绕MCAM2模型开展色调线性问题及特征色色调角优化研究，致力于提升特征色色调线性与颜色空间的感知均匀性。
+                    </p>
+                    <hr class="member-divider" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 第3排：右 -->
+        <div class="member-card student-card">
+            <div class="member-inner">
+                <img src="个人照片/2008.JPG" alt="刘嘉童悦" class="member-photo" />
+                <div class="member-info">
+                    <h3 class="member-name">刘嘉童悦（2025级）</h3>
+                    <p class="member-desc">
+                        主要研究方向为光谱压缩与光谱重建，重点关注高维光谱数据的低维表示、同色异谱黑建模以及多光源条件下的光谱重建精度优化。目前围绕光谱压缩模型、色差评价与重建稳定性开展研究，致力于提升现有光谱压缩与重建方法在低存储条件下的重建精度、色差一致性与跨光源适应能力。
+                    </p>
+                    <hr class="member-divider" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 第4排：左 -->
+        <div class="member-card student-card">
+            <div class="member-inner">
+                <img src="个人照片/2007.JPG" alt="方晓婷" class="member-photo" />
+                <div class="member-info">
+                    <h3 class="member-name">方晓婷（2025级）</h3>
+                    <p class="member-desc">
+                        主要研究方向为色彩科学与图像处理。目前围绕MCAM1 基于 CIECAM16 框架改进的新一代色貌模型，核心目标是解决 CIECAM16 在色调线性、特征色定位、视觉均匀性上的缺陷，支撑跨媒体、广色域、HDR 颜色准确再现。
+                    </p>
+                    <hr class="member-divider" />
+                </div>
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

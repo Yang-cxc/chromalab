@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实验室设备</title>
+
+<style type="text/css">
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif;
+    color: #222;
+    background: linear-gradient(135deg, #EAF2F8 0%, #DDE7F2 38%, #E8E4F5 72%, #F5F1F8 100%);
+}
+
+/* 顶部区域 */
+.topbar {
+    width: 100%;
+    height: 95px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.65);
+    border-bottom: 1px solid rgba(180, 180, 190, 0.45);
+    box-shadow: 0 4px 18px rgba(80, 90, 120, 0.12);
+}
+
+/* 页面标题 */
+.page-title {
+    text-align: center;
+    font-size: 42px;
+    color: #2F3A68;
+    font-weight: bold;
+    line-height: 95px;
+    letter-spacing: 3px;
+}
+
+/* 顶部导航 */
+.nav {
+    position: absolute;
+    top: 35px;
+    right: 70px;
+    z-index: 10;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 28px;
+}
+
+.nav ul li a {
+    color: #1F2D3D;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.nav ul li a:hover {
+    color: #7A4CC2;
+    border-bottom: 2px solid #7A4CC2;
+}
+
+/* 主体容器 */
+.container {
+    width: 1180px;
+    margin: 45px auto 60px auto;
+}
+
+/* 分割线 */
+.section-line {
+    border: none;
+    border-top: 1px solid rgba(150, 150, 165, 0.45);
+    margin: 0 0 35px 0;
+}
+
+/* 设备区域：一排两个 */
+.equipment-grid {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 每张设备卡片 */
+.equipment-card {
+    float: left;
+    width: 48%;
+    margin-bottom: 34px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(210, 210, 220, 0.9);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(70, 80, 110, 0.16);
+    overflow: hidden;
+}
+
+.equipment-card:nth-child(odd) {
+    margin-right: 4%;
+}
+
+.equipment-card:hover {
+    box-shadow: 0 12px 30px rgba(70, 80, 110, 0.24);
+}
+
+/* 图片区域：用背景图方式，避免图片被压扁 */
+.equipment-photo {
+    float: left;
+    width: 220px;
+    height: 260px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #f8f8f8;
+}
+
+/* 文字区域 */
+.equipment-info {
+    margin-left: 220px;
+    min-height: 260px;
+    padding: 24px 28px 20px 28px;
+    box-sizing: border-box;
+}
+
+/* 设备名称 */
+.equipment-name {
+    font-size: 25px;
+    color: #7A4CC2;
+    margin: 0 0 16px 0;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+/* 设备简介 */
+.equipment-desc {
+    font-size: 17px;
+    line-height: 1.75;
+    margin: 0 0 16px 0;
+    color: #2C2C2C;
+}
+
+/* 分割线 */
+.equipment-divider {
+    border: none;
+    border-top: 2px solid rgba(120, 120, 130, 0.45);
+    margin: 14px 0 0 0;
+}
+
+/* 页面较窄时变成一列 */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+    }
+
+    .nav {
+        right: 35px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .topbar {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .page-title {
+        line-height: 1.4;
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .nav {
+        position: static;
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin: 0 10px;
+    }
+
+    .equipment-card {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .equipment-photo {
+        float: none;
+        width: 100%;
+        height: 300px;
+    }
+
+    .equipment-info {
+        margin-left: 0;
+        min-height: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="page-title">实验室设备</div>
+
+    <!-- 导航栏 -->
+    <div class="nav">
+        <ul>
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./first13.html">新闻</a></li>
+            <li><a href="./first11.html">成员</a></li>
+            <li><a href="./first-chengguo.html">成果发表</a></li>
+            <li><a>实验设备</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+
+    <hr class="section-line" />
+
+    <div class="equipment-grid">
+
+        <!-- 设备1 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/2.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">爱色丽标准光源观察箱（SpectraLight QC）</h3>
+                <p class="equipment-desc">
+                    用于在多种标准光源条件下进行颜色观察、视觉比色和色差评价，可减少环境光干扰，提高颜色判断的准确性与一致性，常用于颜色科学、印刷、纺织、涂料及图像颜色还原等实验。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备2 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/11.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">常州千明智能照明标准光源箱</h3>
+                <p class="equipment-desc">
+                    用于在标准光源条件下进行颜色观察、视觉比色和色差评价，是颜色科学实验中的基础照明设备。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备3 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/44.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">CM-2600d 分光光度计</h3>
+                <p class="equipment-desc">
+                    可用于测量物体表面的颜色参数和色差值，获得 CIE Lab、XYZ、色度坐标及 ΔE 等数据。该设备常用于材料、印刷、纺织、涂料及颜色科学实验中的颜色测量、色差评价和颜色质量控制。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备4 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/55.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">CS-2000 分光辐射亮度计</h3>
+                <p class="equipment-desc">
+                    该设备用于测量显示器、光源及发光材料的光谱辐射亮度、亮度、色度坐标和相关色温等参数，常用于显示设备校准、颜色测量和视觉感知实验。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备5 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/8.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">EIZO 专业彩色显示器</h3>
+                <p class="equipment-desc">
+                    该设备用于高精度图像显示与颜色评价，具有较好的色彩稳定性和色域表现，可用于图像颜色校准、视觉感知实验、色差评价和颜色还原研究。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备6 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/6.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">NEC 专业显示器</h3>
+                <p class="equipment-desc">
+                    该设备用于高精度图像显示与颜色评价，具有较好的色彩还原能力和显示稳定性，可用于显示校准、图像处理、色差评价及颜色视觉实验。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备7 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/3.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">BenQ 专业显示器</h3>
+                <p class="equipment-desc">
+                    该设备用于图像显示、视觉评价和实验刺激呈现，可配合色彩校准设备进行显示器校准，常用于颜色科学、图像处理、色差评价及视觉感知实验。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备8 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/5.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">爱特蒙特单色仪</h3>
+                <p class="equipment-desc">
+                    该设备用于从复合光中分离并输出特定波长的单色光，可进行光谱扫描、光源波长选择及光学性能测试，常用于颜色科学、光谱测量和视觉感知实验中的标准光刺激生成。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备9 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/333.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">爱色丽标准色卡</h3>
+                <p class="equipment-desc">
+                   该色卡由多组标准颜色块组成，可作为颜色校准和颜色还原的参考标准，常用于相机校准、图像采集、白平衡调整、色差评价及颜色科学实验。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备10：新增 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/444.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">爱色丽标准色卡</h3>
+                <p class="equipment-desc">
+                    该色卡包含多组标准颜色块，可作为图像采集、显示校准和颜色还原评价的参考标准，常用于相机色彩校正、白平衡调整、色差分析及颜色科学实验。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备11：新增 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/555.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">白平衡卡</h3>
+                <p class="equipment-desc">
+                    白平衡卡具有稳定的中性反射特性，可为相机、摄像机和图像采集系统提供白平衡校准参考，用于消除光源色偏，提高图像颜色还原的准确性。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备12：新增 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/666.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">光谱辐射计</h3>
+                <p class="equipment-desc">
+                    该设备用于测量光源和显示设备的光谱辐射信息，可获得光谱功率分布、色度坐标、亮度和相关色温等参数，常用于光源校准、显示测量及颜色视觉实验。固润光电产品信息显示，该型号为可见光光谱辐射计，波长范围约为 380–780 nm。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备13：新增 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/33.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">孟塞尔色卡集</h3>
+                <p class="equipment-desc">
+                    该色卡集按照孟塞尔颜色体系对颜色的色相、明度和彩度进行系统排列，可作为颜色标定、颜色比较和视觉评价的标准参考工具，常用于颜色科学、色彩教学、样品比色及颜色感知实验。
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <!-- 设备14：新增 -->
+        <div class="equipment-card">
+            <div class="equipment-photo" style="background-image: url('shebei/777.jpg');"></div>
+            <div class="equipment-info">
+                <h3 class="equipment-name">数码单反相机</h3>
+                <p class="equipment-desc">
+                    数码单反相机（D610，尼康 Nikon 公司）
+该设备用于高质量实验图像采集和样品拍摄，具有较好的成像质量和色彩记录能力，可配合标准光源、色卡和色彩校准流程，用于颜色还原、图像处理及视觉感知实验。
+数码单反相机（EOS 60D 套机，佳能中国有限公司）
+该设备用于实验图像采集、样品拍摄和图像记录，可用于颜色科学实验中的图像获取、色彩校准、白平衡调整及颜色还原效果评价。
+
+                </p>
+                <hr class="equipment-divider" />
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
